@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, Image, Dimensions} from 'react-native';
+import {Text, View, Image, Dimensions, FlatList} from 'react-native';
 
 const width = Dimensions.get('screen').width;
 
@@ -14,12 +14,16 @@ export default class App extends Component {
 
     return (
       <View style={{marginTop: 20}}>
-      {fotos.map(foto =>
-        <View key={foto.id}>
-          <Text>{foto.usuario}</Text>
-          <Image source={require('./resources/img/alura.jpg')} style={{width: width, height: width}} />      
-        </View>
-      )}
+        <FlatList
+          data={fotos}
+          keyExtractor={item => String(item.id)}
+          renderItem= {({item}) => 
+            <View>
+              <Text>{item.usuario}</Text>
+              <Image source={require('./resources/img/alura.jpg')} style={{width: width, height: width}} />      
+            </View>
+          }
+        />
       </View>
     );
   }
