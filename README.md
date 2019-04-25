@@ -31,5 +31,8 @@ Acesse o dev menu > Show Inspector e clique em alguns componentes visuais na tel
 Features:
 
 FlatList -> https://facebook.github.io/react-native/docs/flatlist.html
+
 Dimensions -> https://facebook.github.io/react-native/docs/dimensions.html
+
 FlexBox -> https://cursos.alura.com.br/course/posicione-elementos-com-flexbox
+
