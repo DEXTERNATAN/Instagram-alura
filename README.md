@@ -36,3 +36,4 @@ Dimensions -> https://facebook.github.io/react-native/docs/dimensions.html
 
 FlexBox -> https://cursos.alura.com.br/course/posicione-elementos-com-flexbox
 
+StyleSheet -> https://facebook.github.io/react-native/docs/stylesheet.html

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Text, View, Image, Dimensions, FlatList, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { View, FlatList, StyleSheet } from 'react-native';
+import { Post } from '../Instagram-alura/components/Post';
 
-const width = Dimensions.get("screen").width;
 
 export default class App extends Component {
   render() {
@@ -13,13 +13,7 @@ export default class App extends Component {
           data={fotos}
           keyExtractor={item => String(item.id)}
           renderItem={({ item }) => (
-            <View>
-              <View style={styles.cabecalho}>
-                <Image source={require("./resources/img/alura.jpg")} style={styles.fotoDePerfil} />
-                <Text>{item.usuario}</Text>
-              </View>
-              <Image source={require("./resources/img/alura.jpg")} style={styles.foto} />
-            </View>
+            <Post foto={item} />
           )}
         />
       </View>
@@ -30,20 +24,5 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 20
-  },
-  cabecalho: {
-    margin: 10, 
-    flexDirection: "row", 
-    alignItens: "center"
-  },
-  fotoDePerfil: {
-    borderRadius: 20, 
-    width: 40, 
-    height: 40
-  },
-  foto: {
-    borderRadius: 20, 
-    width: 40, 
-    height: 40
   }
 })
